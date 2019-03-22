@@ -147,7 +147,7 @@ public class BookDetailActivity extends AppCompatActivity {
             default:
                 return super.onOptionsItemSelected(item);
         }
-        return true;
+        return super.onOptionsItemSelected(item);
     }
 
     private void launchShareChooser() {
