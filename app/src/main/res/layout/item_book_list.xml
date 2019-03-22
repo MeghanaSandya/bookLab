@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <com.android.volley.toolbox.NetworkImageView
+        android:id="@+id/book_imageView"
+        android:layout_width="75dp"
+        android:layout_height="100dp"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="5dp"
+        android:adjustViewBounds="true"
+        android:background="@drawable/default_book_image"
+        android:scaleType="fitXY" />
+
+    <TextView
+        android:id="@+id/book_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="10dp"
+        android:layout_toEndOf="@id/book_imageView"
+        android:layout_alignEnd="@id/divider"
+        android:maxLines="2"
+        android:text="@string/title"
+        android:textColor="@android:color/black"
+        android:textSize="15sp"
+        android:textStyle="bold" />
+
+
+    <TextView
+        android:id="@+id/author_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/book_title"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:maxLines="2"
+        android:layout_alignEnd="@id/divider"
+        android:layout_toEndOf="@id/book_imageView"
+        android:text="@string/author_name"
+        android:textColor="#808080"
+        android:textSize="12sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/publishedYear"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_toEndOf="@id/book_imageView"
+        android:layout_alignEnd="@id/divider"
+        android:layout_below="@id/author_name"
+        android:text="@string/published_year" />
+
+
+    <View
+        android:id="@+id/divider"
+        android:layout_width="2dp"
+        android:layout_height="100dp"
+        android:layout_marginStart="275dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="5dp"
+        android:background="@drawable/recycler_view_divider" />
+
+
+    <ImageView
+        android:id="@+id/favorite_icon"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:layout_marginStart="310dp"
+        android:layout_marginTop="40dp"
+        android:background="@drawable/ic_star_border"
+        android:contentDescription="@null" />
+
+</RelativeLayout>

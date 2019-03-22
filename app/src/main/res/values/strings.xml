@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">Book Lab</string>
+    <string name="title">Title</string>
+    <string name="author_name">Author Name</string>
+    <string name="published_year">Published Year</string>
+
+    <string name="book_list_message">This is the place you can search for your favorite books. Please start browsing by Book Name or Author Name</string>
+
+    <string name="menu_search">Search</string>
+    <string name="menu_share">Share</string>
+    <string name="menu_favorite">Favorites</string>
+
+    <string name="book_title">Title</string>
+    <string name="published_by">Published By:</string>
+    <string name="no_of_pages">No Of Pages:</string>
+    <string name="language">Language</string>
+</resources>
