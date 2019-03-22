@@ -44,6 +44,10 @@ public class BookListActivity extends AppCompatActivity implements BookAdapter.I
         setContentView(R.layout.activity_book_list);
         recyclerView = findViewById(R.id.recyclerView);
         searchTextView = findViewById(R.id.textView);
+        if (getSupportActionBar() != null) {
+            getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+            getSupportActionBar().setHomeButtonEnabled(true);
+        }
 
         DividerItemDecoration dividerItemDecoration = new DividerItemDecoration(this, DividerItemDecoration.VERTICAL);
         dividerItemDecoration.setDrawable(getResources().getDrawable(R.drawable.recycler_view_divider));
