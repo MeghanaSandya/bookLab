@@ -63,6 +63,7 @@ public class FavoritesBookActivity extends AppCompatActivity implements BookAdap
     @Override
     protected void onResume() {
         super.onResume();
+        displayBooks();
         mBookAdapter.notifyDataSetChanged();
     }
 
@@ -79,5 +80,13 @@ public class FavoritesBookActivity extends AppCompatActivity implements BookAdap
         Intent intent = new Intent(this, BookDetailActivity.class);
         intent.putExtra("book", book);
         startActivity(intent);
+    }
+
+    @Override
+    public void notifyAdapter() {
+        displayBooks();
+        if (mBookAdapter != null) {
+            mBookAdapter.notifyDataSetChanged();
+        }
     }
 }

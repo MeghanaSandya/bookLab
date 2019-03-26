@@ -15,15 +15,21 @@
         android:theme="@style/AppTheme"
         tools:ignore="GoogleAppIndexingWarning">
 
-        <activity android:name=".view.BookListActivity">
+        <activity
+            android:name=".view.BookListActivity"
+            android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".view.BookDetailActivity" />
-        <activity android:name=".view.FavoritesBookActivity" />
+        <activity
+            android:name=".view.BookDetailActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".view.FavoritesBookActivity"
+            android:screenOrientation="portrait" />
     </application>
 
 </manifest>

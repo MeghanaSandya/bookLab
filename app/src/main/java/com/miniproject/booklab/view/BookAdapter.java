@@ -66,6 +66,9 @@ class BookAdapter extends RecyclerView.Adapter<BookAdapter.BookViewHolder> {
             view.setBackground(ContextCompat.getDrawable(view.getContext(), R.drawable.ic_star_border));
             Utils.removeISBNValue(book.getCoverEditionKey());
         }
+        if (itemClickListener != null) {
+            itemClickListener.notifyAdapter();
+        }
         Toast.makeText(view.getContext(), toastText, Toast.LENGTH_LONG).show();
     }
 
@@ -89,7 +92,6 @@ class BookAdapter extends RecyclerView.Adapter<BookAdapter.BookViewHolder> {
                         .ic_nocover_image));
         bookImage.setImageUrl(url, mImageLoader);
     }
-
 
     class BookViewHolder extends RecyclerView.ViewHolder {
         private final ImageView mFavIcon;
@@ -130,6 +132,7 @@ class BookAdapter extends RecyclerView.Adapter<BookAdapter.BookViewHolder> {
 
     public interface ItemClickListener {
         void onItemClick(int position, View view, Book book);
+        void notifyAdapter();
     }
 }
 
